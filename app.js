@@ -1,21 +1,12 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var carrinhoRouter = require('./routes/carrinho');
-var contatoRouter = require('./routes/contato');
-var devolucaoEprivacidadeRouter = require('./routes/devolucaoEprivacidade');
-var dicasEcuidadosRouter = require('./routes/dicasEcuidados')
-var inicialRouter = require('./routes/inicial');
-var maisVendidasRouter = require('./routes/maisVendidas');
-var menuRoter = require('./routes/menu');
-var minhaContaRouter = require('./routes/minhaConta');
-var servicosRouter = require('./routes/servicos');
-var viveiroRouter = require('./routes/viveiro');
+const indexRouter = require('./routes/index');
+
+
 
 
 
@@ -32,17 +23,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('./carrinho' , carrinhoRouter);
-app.use('./contato' , contatoRouter);
-app.use('./devolucaoEprivacidade' , devolucaoEprivacidadeRouter);
-app.use('./dicasEcuidados', dicasEcuidadosRouter );
-app.use('./inicial' , inicialRouter);
-app.use('./maisVendidas' , maisVendidasRouter);
-app.use('./menu' , menuRoter);
-app.use('./minhaConta' , minhaContaRouter);
-app.use('./servicos', servicosRouter);
-app.use('./viveiro' , viveiroRouter);
+
 
 
 

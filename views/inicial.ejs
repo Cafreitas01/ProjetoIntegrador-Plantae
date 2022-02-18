@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<% include('./partials/head') %> 
-<body>
-    <%- include('./partials/header') %>
-    <main>
+<%- include('./partials/head'); %>
 
-    </main>
-</body>
-<%- include('./partials/footer') %>
+	<body>
+
+		<%- include('./partials/header'); %>
+
+			<main class="admin">
+				<div class="container">
+					<h2>Minha Conta</h2>
+          <h2>Carrinho</h2>
+          
+					<section>
+						<article>
+							<a href="">Mais Vendidas</a>
+						</article> <br>
+						<article>
+							<a href="">Serviços</a>
+						</article> <br>
+
+					</section>
+				</div>
+			</main>
+			
+			<%- include('./partials/footer'); %>
+
+	</body>
+
 </html>
+
