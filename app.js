@@ -5,9 +5,11 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
-
-
-
+const viveiroRouter = require('./routes/viveiro');
+const terrariosRouter = require('./routes/terrarios');
+const carrinhoProdutoRouter = require('./routes/carrinhoProduto');
+const carrinhoDadosClienteRouter = require('./routes/carrinhoDadosCliente');
+const carrinhoPagamentoRouter = require('./routes/carrinhoPagamento');
 
 
 var app = express();
@@ -22,9 +24,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 app.use('/', indexRouter);
-
-
+app.use('/viveiro', viveiroRouter);
+app.use('/terrarios', terrariosRouter);
+app.use('/carrinhoProduto', carrinhoProdutoRouter);
+app.use('/carrinhoDadosCliente', carrinhoDadosClienteRouter);
+app.use('/carrinhoPagamento', carrinhoPagamentoRouter);
 
 
 
@@ -33,8 +39,10 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
+
 // error handler
 app.use(function(err, req, res, next) {
+
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
