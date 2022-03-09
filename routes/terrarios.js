@@ -1,13 +1,10 @@
-var express = require("express");
-var router = express.Router();
-var terrariosController = require("../controllers/terrariosController");
+/*
 
-/* GET home page. */
-router.get("/", function (req, res, next) {
-    res.render("terrarios", { title: "express" });
-});
+const express = require('express');
+const terrariosController = require('../controllers/terrariosController');
+const router = express.Router();
 
-
-router.get("/terrarios", terrariosController.terrarios);
+router.get('/', terrariosController.buscarTerrarios);
 
 module.exports = router;
+*/

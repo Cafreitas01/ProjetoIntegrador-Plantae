@@ -1,4 +1,6 @@
-const viveiroModel = require('../models/viveiro.json');
+const { render } = require("express/lib/response");
+
+const viveiroModel = render('../middleware/viveiro.js');
 
 const viveiroController = {
     buscarviveiro: (req, res) => {
