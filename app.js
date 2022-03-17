@@ -11,8 +11,10 @@ const viveiroRouter = require('./routes/viveiro');
 // const carrinhoDadosClienteRouter = require('./routes/carrinhoDadosCliente');
 // const carrinhoPagamentoRouter = require('./routes/carrinhoPagamento');
 
+const sobreRouter = require('./routes/sobre');
+const contatoRouter = require('./routes/contato');
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -32,7 +34,8 @@ app.use('/viveiro', viveiroRouter);
 // app.use('/carrinhoDadosCliente', carrinhoDadosClienteRouter);
 // app.use('/carrinhoPagamento', carrinhoPagamentoRouter);
 
-
+app.use('/sobre', sobreRouter);
+app.use('/contato', contatoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
