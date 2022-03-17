@@ -1,0 +1,65 @@
+[
+    {
+        "id": "",
+        "fotoURL": "./public/images/ornamentais.png",
+        "nome": "Ornamentais"
+
+
+    },
+    {
+        "id": "",
+        "fotoURL": "./public/images/sementes.png",
+        "nome": "Sementes"
+    },
+    {
+        "id": "",
+        "fotoURL": "./public/images/terrarios.png",
+        "nome": "Terrários"
+    },
+    {
+        "id": "",
+        "fotoURL": "./public/images/pequenas.png",
+        "nome": "Pequenas"
+    },
+    {
+        "id": "",
+        "fotoURL": "./public/images/temperos.png",
+        "nome": "Temperos"
+    },
+    {
+        "id": "",
+        "fotoURL": "./public/images/cactos.png",
+        "nome": "Cactos"
+    
+    },
+    {
+        "id": "",
+        "fotoURL": "./public/images/aereas.png",
+        "nome": "Aéreas"
+    },
+    {
+        "id": "",
+        "fotoURL": "./public/images/carnivoras.png",
+        "nome": "Carnívoras"
+    },
+    {
+        "id": "",
+        "fotoURL": "./public/images/bonsais.png",
+        "nome": "Bonsais"
+    },
+    {
+        "id": "",
+        "fotoURL": "./public/images/grandes.png",
+        "nome": "Grandes"
+    },
+    {
+        "id": "",
+        "fotoURL": "./public/images/frutiferas.png",
+        "nome": "Frutíferas"
+    },
+    {
+        "id": "",
+        "fotoURL": "./public/images/materiais.png",
+        "nome": "Materiais"
+    }
+]

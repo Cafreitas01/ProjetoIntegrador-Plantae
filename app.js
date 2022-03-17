@@ -5,12 +5,16 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
+const viveiroRouter = require('./routes/viveiro');
+// const terrariosRouter = require('./routes/terrarios');
+// const carrinhoProdutoRouter = require('./routes/carrinhoProduto');
+// const carrinhoDadosClienteRouter = require('./routes/carrinhoDadosCliente');
+// const carrinhoPagamentoRouter = require('./routes/carrinhoPagamento');
 
+const sobreRouter = require('./routes/sobre');
+const contatoRouter = require('./routes/contato');
 
-
-
-
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -22,19 +26,26 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 app.use('/', indexRouter);
+app.use('/viveiro', viveiroRouter);
+// app.use('/terrarios', terrariosRouter);
+// app.use('/carrinhoProduto', carrinhoProdutoRouter);
+// app.use('/carrinhoDadosCliente', carrinhoDadosClienteRouter);
+// app.use('/carrinhoPagamento', carrinhoPagamentoRouter);
 
-
-
-
+app.use('/sobre', sobreRouter);
+app.use('/contato', contatoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
 
+
 // error handler
 app.use(function(err, req, res, next) {
+
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
