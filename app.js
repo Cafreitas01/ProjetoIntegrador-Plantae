@@ -6,10 +6,10 @@ const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const viveiroRouter = require('./routes/viveiro');
-const terrariosRouter = require('./routes/terrarios');
-const carrinhoProdutoRouter = require('./routes/carrinhoProduto');
-const carrinhoDadosClienteRouter = require('./routes/carrinhoDadosCliente');
-const carrinhoPagamentoRouter = require('./routes/carrinhoPagamento');
+// const terrariosRouter = require('./routes/terrarios');
+// const carrinhoProdutoRouter = require('./routes/carrinhoProduto');
+// const carrinhoDadosClienteRouter = require('./routes/carrinhoDadosCliente');
+// const carrinhoPagamentoRouter = require('./routes/carrinhoPagamento');
 
 
 var app = express();
@@ -27,10 +27,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/viveiro', viveiroRouter);
-app.use('/terrarios', terrariosRouter);
-app.use('/carrinhoProduto', carrinhoProdutoRouter);
-app.use('/carrinhoDadosCliente', carrinhoDadosClienteRouter);
-app.use('/carrinhoPagamento', carrinhoPagamentoRouter);
+// app.use('/terrarios', terrariosRouter);
+// app.use('/carrinhoProduto', carrinhoProdutoRouter);
+// app.use('/carrinhoDadosCliente', carrinhoDadosClienteRouter);
+// app.use('/carrinhoPagamento', carrinhoPagamentoRouter);
 
 
 

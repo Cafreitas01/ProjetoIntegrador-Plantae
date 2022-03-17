@@ -1,11 +1,10 @@
-const { render } = require("express/lib/response");
+const express = require('express');
+const viveiroController = require('../controllers/viveiroController');
+const router = express.Router();
 
-const viveiroModel = render('../middleware/viveiro.js');
-
-const viveiroController = {
-    buscarviveiro: (req, res) => {
-        res.render('viveiro', { viveiro: viveiroModel })
-    }
-};
+router.get('/', function (req, res, next) {
+    res.render('viveiro');
+});
 
 module.exports = viveiroController;
+
