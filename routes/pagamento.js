@@ -1,9 +1,9 @@
 const express = require('express');
-const viveiroController = require('../controllers/viveiroController');
+const pagamentoController = require('../controllers/pagamentoController');
 const router = express.Router();
 
 router.get('/', function (req, res, next) {
-    res.render('viveiro');
+    res.render('pagamento');
 });
 
 module.exports = router;

@@ -4,15 +4,19 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-const indexRouter = require('./routes/index');
-const viveiroRouter = require('./routes/viveiro');
-// const terrariosRouter = require('./routes/terrarios');
-// const carrinhoProdutoRouter = require('./routes/carrinhoProduto');
-// const carrinhoDadosClienteRouter = require('./routes/carrinhoDadosCliente');
-// const carrinhoPagamentoRouter = require('./routes/carrinhoPagamento');
-
-const sobreRouter = require('./routes/sobre');
 const contatoRouter = require('./routes/contato');
+const dadosClienteRouter = require('./routes/dadosCliente');
+const indexRouter = require('./routes/index');
+const pagamentoRouter = require('./routes/pagamento');
+const produtoEscolhidoRouter = require('./routes/produtoEscolhido');
+const sobreRouter = require('./routes/sobre');
+const terrariosRouter = require('./routes/terrarios');
+const viveiroRouter = require('./routes/viveiro');
+const dadosClienteRouter = require('./routes/dadosCliente');
+
+
+
+
 
 const app = express();
 
@@ -29,10 +33,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/viveiro', viveiroRouter);
-// app.use('/terrarios', terrariosRouter);
-// app.use('/carrinhoProduto', carrinhoProdutoRouter);
-// app.use('/carrinhoDadosCliente', carrinhoDadosClienteRouter);
-// app.use('/carrinhoPagamento', carrinhoPagamentoRouter);
+app.use('/terrarios', terrariosRouter);
+app.use('/produto', carrinhoProdutoRouter);
+app.use('/dadosCliente', carrinhoDadosClienteRouter);
+app.use('/pagamento', carrinhoPagamentoRouter);
 
 app.use('/sobre', sobreRouter);
 app.use('/contato', contatoRouter);
