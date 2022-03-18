@@ -5,16 +5,18 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 const contatoRouter = require('./routes/contato');
-const dadosClienteRouter = require('./routes/dadosCliente');
 const indexRouter = require('./routes/index');
 const pagamentoRouter = require('./routes/pagamento');
-const produtoEscolhidoRouter = require('./routes/produtoEscolhido');
+const carrinhoRouter = require('./routes/carrinho');
 const sobreRouter = require('./routes/sobre');
 const terrariosRouter = require('./routes/terrarios');
 const viveiroRouter = require('./routes/viveiro');
-const dadosClienteRouter = require('./routes/dadosCliente');
-
-
+const loginRouter = require('./routes/login');
+const maisVendidasRouter = require('./routes/maisVendidas');
+const servicosRouter = require('./routes/servicos');
+const menuRouter = require('./routes/menu');
+const dicasEcuidadosRouter = require('./routes/dicasEcuidados');
+const minhaContaRouter = require('./routes/minhaConta');
 
 
 
@@ -23,7 +25,6 @@ const app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -34,12 +35,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/viveiro', viveiroRouter);
 app.use('/terrarios', terrariosRouter);
-app.use('/produto', carrinhoProdutoRouter);
-app.use('/dadosCliente', carrinhoDadosClienteRouter);
-app.use('/pagamento', carrinhoPagamentoRouter);
-
+app.use('/carrinho', carrinhoRouter);
+app.use('/login', loginRouter);
+app.use('/pagamento', pagamentoRouter);
 app.use('/sobre', sobreRouter);
 app.use('/contato', contatoRouter);
+app.use('/maisVendidas', maisVendidasRouter);
+app.use('/servicos', servicosRouter);
+app.use('/menu', menuRouter);
+app.use('/dicasEcuidados', dicasEcuidadosRouter);
+app.use('/minhaConta',minhaContaRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
