@@ -1,9 +1,10 @@
 const express = require('express');
-const usersController = require('../controllers/usersController');
+const pagamentoController = require('../controllers/pagamentoController');
 const router = express.Router();
 
 router.get('/', function (req, res, next) {
-    res.render('users');
+    res.render('pagamento');
 });
 
 module.exports = router;
+
