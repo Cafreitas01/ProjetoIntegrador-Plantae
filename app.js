@@ -17,6 +17,7 @@ const servicosRouter = require('./routes/servicos');
 const menuRouter = require('./routes/menu');
 const dicasEcuidadosRouter = require('./routes/dicasEcuidados');
 const minhaContaRouter = require('./routes/minhaConta');
+const inicialRouter = require('./routes/inicial')
 
 
 
@@ -45,6 +46,7 @@ app.use('/servicos', servicosRouter);
 app.use('/menu', menuRouter);
 app.use('/dicasEcuidados', dicasEcuidadosRouter);
 app.use('/minhaConta',minhaContaRouter);
+app.use('/inicial',inicialRouter);
 
 
 // catch 404 and forward to error handler
