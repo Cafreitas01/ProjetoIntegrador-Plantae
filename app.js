@@ -17,8 +17,10 @@ const servicosRouter = require('./routes/servicos');
 const menuRouter = require('./routes/menu');
 const dicasEcuidadosRouter = require('./routes/dicasEcuidados');
 const minhaContaRouter = require('./routes/minhaConta');
-const inicialRouter = require('./routes/inicial')
-
+const inicialRouter = require('./routes/inicial');
+const cadastroRouter = require('./routes/cadastro');
+const ferramentasRouter = require('./routes/ferramentas');
+const entregaRouter = require('./routes/entrega');
 
 
 const app = express();
@@ -47,7 +49,9 @@ app.use('/menu', menuRouter);
 app.use('/dicasEcuidados', dicasEcuidadosRouter);
 app.use('/minhaConta',minhaContaRouter);
 app.use('/inicial',inicialRouter);
-
+app.use('/cadastro',cadastroRouter);
+app.use('/ferramentas',ferramentasRouter);
+app.use('/entrega',entregaRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

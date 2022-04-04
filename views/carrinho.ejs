@@ -5,11 +5,11 @@
   <head>
   <%- include('./partials/head'); %>
 </head>
-<body>
+
 <header>
   <%- include('./partials/header'); %>
 </header>
-
+<body>
 <!--Icone Whatsapp-->
 <section class="fixed-bottom">
   <div class=" d-flex flex-row-reverse">
@@ -21,15 +21,80 @@
 
 
 <!-- ESCREVA SEU CODIGO AQUI-->
+<!--carrinho-->
+<h1 class="text-center text-success m-5">.Carrinho<a href="./maisVendidas.ejs"></a></h1>
 
+<section class="mx-auto m-5 text-success  " style="width: 800px;">
+    <div class="d-flex justify-content-between text-success container border border-success m-2">
+        <div class="card" style="width: 18rem;">
+          <img src="./ferramentas/images10.jpg" width="100px" height="100">
+        </div>
+        <div class="m-12">
+          <H6> Quantidade</H6>
+          <span> 1</span>
+          </div>
+         <div class="m-12">
+        <H6> Ferramenta Kit Jardim</H6>
+        <span> R$ 12,00</span>
+        </div>
+        <div class="m-12">
+          <H6> Parcelamento</H6>
+          <span> R$ 3x 1,99</span>
+          </div>
+          
+      </div>
+      </div>
+      <div class="d-flex justify-content-between text-success container border border-success m-2">
+        <div class="card" style="width: 18rem;">
+          <img src="./ferramentas/images10.jpg" width="100px" height="100">
+        </div>
+        <div class="m-12">
+          <H6> Quantidade</H6>
+          <span> 1</span>
+          </div>
+         <div class="m-12">
+        <H6> Ferramenta Kit Jardim</H6>
+        <span> R$ 12,00</span>
+        </div>
+        <div class="m-12">
+          <H6> Parcelamento</H6>
+          <span> R$ 3x 1,99</span>
+          </div>
+    </section>
+    
 
+    <!-- frete-->
+   
+      
+    <section class="mx-auto m-5 text-success border border-success  " style="width: 800px;">
+    <div>
+      <h4 class="m-1">Calcular Frete</h4>
+      <form>
+        
+          <div class="form-group col-md-3">
+            <label>CEP</label>
+            <input type="text" class="form-control"/>
+            <button type="button" class="btn btn-success m-1" data-toggle="button" aria-pressed="false" autocomplete="off">
+              Calcular frete
+            </button>
+            <div class="m-3">
+              <span class="p-2"> Total de Frete </span>
+               <H6 class="p-2"> R$ 20,00</H6>
+            </div>
+          </div>
+         
+        </div>
+      </form>
+      <div class="d-flex flex-row-reverse">
+        <a class="btn btn-success p-2" href="./login" role="button">Finalizar Compra</a>
+        </div>
+        </section>
+    </section>
 
 </body>
 <footer>
   <%- include('./partials/footer'); %>
 </footer>
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

@@ -1,34 +1,5 @@
-
-
-* {
-    box-sizing: border-box;
-}
-
 body {
-    padding: 0;
-    margin: 0;   
-}
-.container {
-    margin: 20px;
-    padding: 20px;
-}
-.imagem3{
-    text-align: center;
-    font-size: 35px;
-    margin: auto;
-    color: rgba(136, 136, 136, 1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+	margin-top: 20px;
+};
 
-.maisVendidas{
- background-image: url(/images/cactos.png);
-}
-.Inspire-se{
-background-image: url(/images/CarroselRosas.jpg);
-}
 
-.CrieSeuJardim{
- background-image: url(/images/crieSeuJardim.png);
-}
