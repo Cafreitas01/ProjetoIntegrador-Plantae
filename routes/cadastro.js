@@ -1,9 +1,8 @@
 const express = require('express');
-const cadastroController = require('../controllers/cadastroController');
+const RegisterController = require('../controllers/RegisterController');
 const router = express.Router();
 
-router.get('/', function (req, res, next) {
-    res.render('cadastro');
-});
+router.get('/', RegisterController.new);
+router.post('/', RegisterController.create);
 
 module.exports = router;

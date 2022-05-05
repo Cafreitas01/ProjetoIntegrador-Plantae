@@ -49,7 +49,7 @@
   <div class="form-group">
     <label for="exampleInputCPF1">CPF</label>
     <input type="CPF" class="form-control form-control-sm" id="exampleInputCPF1" aria-describedby="CPFHelp" placeholder="___-___-___-__">
-    <small id="DataDeNascimentoHelp" class="form-text text-muted"></small>
+    <small id="CPFHelp" class="form-text text-muted"></small>
   </div>
   <div class="form-group">
     <label for="exampleInputTelefone1">Telefone</label>
@@ -73,9 +73,25 @@
       </div>
     </button>
 </form>
+
 <br>
   </nav>
 </section>
+
+<!-- validacao de formulario -->
+
+<script>
+  window.onload = function () {
+    google.accounts.id.initialize({
+      client_id: "384823750998-eom6jp4lf6e51fs732qr8nms3kanukte.apps.googleusercontent.com",
+      ux_mode: "redirect",
+      login_uri: "http://localhost:3000/login/google"
+    });
+    google.accounts.id.renderButton(
+      document.getElementById("buttonDiv"),
+      { theme: "outline", size: "large" }  
+    )};
+</script>
 
 </body>
 
