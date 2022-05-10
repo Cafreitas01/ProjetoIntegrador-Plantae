@@ -19,17 +19,9 @@ module.exports = (Sequelize, Datatypes) => {
         type: Datatypes.INTEGER,
         allowNull: false
     },
-    Forma_de_pagamento:{
-        type: Datatypes.INTEGER,
-        allowNull: false
-    },
-    usuario_id:{
-        type: Datatypes.INTEGER,
-        allowNull: false
-    },
-}, {
+    
      tableName:"formaDePagamento",
-     timesTamps: false
+     timesTamps: true
     });
 
 

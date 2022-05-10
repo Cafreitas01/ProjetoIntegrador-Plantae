@@ -1,7 +1,11 @@
 module.exports = (Sequelize, Datatypes) => {
-    const Item_carrinho = Sequelize.define("Item_carrinho",{
+    const Item_carrinho = Sequelize.define("item_carrinho",{
 
-    id:{
+        quantidade:{
+            type: Datatypes.INTEGER,
+            allowNull: false
+        },
+        id:{
             type: Datatypes.INTEGER,
             primaryKey:true,
             autoIncrement: true,
@@ -19,9 +23,12 @@ module.exports = (Sequelize, Datatypes) => {
     Item_carrinho.associate = (models) =>{
         Item_carrinho.belongsTo(models.Carrinho_sessao,{
             foreignKey: "Carrinho_sessao_Id_usuario",
+            as: "carrinho_sessao"
+        })
+        Item_carrinho.belongsTo(models.Produto,{
+            foreignKey: "produtos_id",
             as: "produto"
         })
-
     }
     return Item_carrinho;
 };

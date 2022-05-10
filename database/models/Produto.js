@@ -1,12 +1,7 @@
 module.exports = (Sequelize, Datatypes) => {
     const Produto = Sequelize.define("Produto",{
 
-    id_produto:{
-            type: Datatypes.INTEGER,
-            primaryKey:true,
-            autoIncrement: true,
-            allowNull: false
-        },
+    
     cor:{
         type: Datatypes.STRING,
         allowNull: false
@@ -31,12 +26,10 @@ module.exports = (Sequelize, Datatypes) => {
         type: Datatypes.INTEGER,
         allowNull: false
     },
-    nome_do_produto:{
+    id:{
         type: Datatypes.INTEGER,
-        allowNull: false
-    },
-    numero_da_residencia:{
-        type: Datatypes.INTEGER,
+        primaryKey:true,
+        autoIncrement: true,
         allowNull: false
     },
     
@@ -45,11 +38,6 @@ module.exports = (Sequelize, Datatypes) => {
      timesTamps: false
     });
     
-    Produto.associate = (models) => { 
-        Produto.hasMany(models.carrinho_sessao,{
-            foreignKey: "carrinho_sessao_id",
-            as: "carrinho_sessao"
-        })
-    }
+   
     return Produto;
 };

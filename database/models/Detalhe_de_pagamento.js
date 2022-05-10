@@ -26,6 +26,11 @@ module.exports = (Sequelize, Datatypes) => {
             foreignKey: "forma_de_pagamento_id",
             as: "forma_de_pagamento"
         })
+        
+        Detalhe_de_pagamento.hasMany(models.forma_de_pagamento,{
+            foreignKey: "pedido_id",
+            as: "pedido"
+        })
     }
     return Detalhe_de_pagamento;
 };

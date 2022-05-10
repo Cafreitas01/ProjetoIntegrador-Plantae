@@ -1,26 +1,30 @@
 module.exports = (Sequelize, Datatypes) => {
-    const pedido_item = Sequelize.define("pedido_item",{
+    const Pedido_item = Sequelize.define("pedido_item",{
 
+    quantidade:{
+        type: Datatypes.INTEGER,
+        allowNull: false
+    },
     id:{
         type: Datatypes.INTEGER,
         primaryKey:true,
         autoIncrement: true,
         allowNull: false
         },
-    quantidade:{
-        type: Datatypes.INTEGER,
-        allowNull: false
-    },
 }, {
      tableName:"pedido_item",
-     timesTamps: false
+     timesTamps: true
     });
 
-    Pedido.associate = (models) => {
-      Pedido.hasMany(models.pedido_item,{
-          foreignKey: "pedido_item_id",
-          as: "pedido_item"
+    Pedido_item.associate = (models) => {
+      Pedido_item.belongsTo(models.pedido_item,{
+          foreignKey: "pedido_id",
+          as: "pedido"
       })
+      Pedido_item.belongsTo(models.pedido_item,{
+        foreignKey: "produto_id",
+        as: "produto"
+    })
     }
-    return pedido_item;
+    return Pedido_item;
 };

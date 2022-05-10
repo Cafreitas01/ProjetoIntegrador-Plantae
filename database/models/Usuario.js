@@ -1,16 +1,17 @@
 module.exports = (Sequelize, Datatypes) => {
     const Usuario = Sequelize.define("Usuario",{
 
-    nome_completo: {
-            type: Datatypes.STRING,
-            allowNull: false
-    },
+    
     id:{
             type: Datatypes.INTEGER,
             primaryKey:true,
             autoIncrement: true,
             allowNull: false
         },
+        CPF: {
+            type: Datatypes.INTEGER,
+            allowNull: false
+    },
     Email:{
         type: Datatypes.STRING,
         allowNull: false
@@ -50,9 +51,9 @@ module.exports = (Sequelize, Datatypes) => {
     });
 
     Usuario.associate = (models) => { 
-        Usuario.hasMany(models.carrinho_sessao,{
-            foreignKey: "carrinho_sessao_id",
-            as: "carrinho_sessao"
+        Usuario.hasMany(models.forma_de_pagamento,{
+            foreignKey: "id",
+            as: "forma_de_pagamento"
         })
     }
     return Usuario;

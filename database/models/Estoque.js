@@ -13,12 +13,12 @@ module.exports = (Sequelize, Datatypes) => {
     },
 }, {
      tableName:"estoque",
-     timesTamps: false
+     timesTamps: true
     });
 
     Estoque.associate = (models) => {
         Estoque.hasMany(models.estoque_id,{
-            foreigKey: "estoque_id",
+            foreigKey: "produto_id",
             as: "produto"
         })
     }

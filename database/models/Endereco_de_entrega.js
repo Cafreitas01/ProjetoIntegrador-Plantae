@@ -30,13 +30,15 @@ module.exports = (Sequelize, Datatypes) => {
     },
 }, {
      tableName:"endereco_de_entrega",
-     timesTamps: false
+     timesTamps: true
     });
 
+    Endereco_de_entrega.associate = (models) => {
+        Endereco_de_entrega.hasMany(models.Endereco_de_entrega,{
+            foreigKey: "pedidos_id",
+            as: "Endereco_de_entrega"
+        })
+
       return Endereco_de_entrega;
+    }
 };
-
-
-
-
-
