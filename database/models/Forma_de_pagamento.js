@@ -21,7 +21,7 @@ module.exports = (Sequelize, Datatypes) => {
     },
     
      tableName:"formaDePagamento",
-     timesTamps: true
+     underscored: true
     });
 
 

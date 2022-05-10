@@ -17,7 +17,7 @@ module.exports = (Sequelize, Datatypes) => {
     },
 }, {
      tableName:"carrinho_sessao",
-     timesTamps: true
+     underscored: true
     });
   
     Carrinho_sessao.associate =(models) => {

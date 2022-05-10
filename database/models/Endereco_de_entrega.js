@@ -30,7 +30,7 @@ module.exports = (Sequelize, Datatypes) => {
     },
 }, {
      tableName:"endereco_de_entrega",
-     timesTamps: true
+     underscored: true
     });
 
     Endereco_de_entrega.associate = (models) => {
