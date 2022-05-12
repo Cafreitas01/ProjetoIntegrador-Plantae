@@ -6,6 +6,10 @@ module.exports = (Sequelize, Datatypes) => {
             autoIncrement: true,
             allowNull: false
         },
+        nome_completo: {
+            type: Datatypes.INTEGER,
+            allowNull: false
+          },
         cpf: {
             type: Datatypes.INTEGER,
             allowNull: false

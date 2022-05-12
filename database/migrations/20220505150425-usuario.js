@@ -13,6 +13,10 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false
       },
+      cpf: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+      },
       Email: {
         type: Sequelize.STRING,
         allowNull: false

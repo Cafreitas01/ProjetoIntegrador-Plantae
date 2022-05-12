@@ -14,11 +14,11 @@ module.exports = {
         allowNull: false
       },
       formas_de_pagamento_id: {
-        type: Datatypes.INTEGER,
+        type: Sequelize.INTEGER,
         allowNull: false
       },
       pedidos_id: {
-        type: Datatypes.INTEGER,
+        type: Sequelize.INTEGER,
         allowNull: false
       },
     });
