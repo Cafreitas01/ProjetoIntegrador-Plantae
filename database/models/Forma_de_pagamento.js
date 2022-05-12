@@ -1,35 +1,38 @@
 module.exports = (Sequelize, Datatypes) => {
-    const Forma_de_pagamento = Sequelize.define("Forma_de_pagamento",{
-
-    id:{
+    const FormaDePagamento = Sequelize.define("FormaDePagamento", {
+        tipo_de_pagamento: {
+            type: Datatypes.STRING,
+            allowNull: false
+        },
+        vencimento: {
             type: Datatypes.INTEGER,
-            primaryKey:true,
+            allowNull: false
+        },
+        id: {
+            type: Datatypes.INTEGER,
+            primaryKey: true,
             autoIncrement: true,
             allowNull: false
         },
-    tipo_de_pagamento:{
-        type: Datatypes.STRING,
-        allowNull: false
-    },
-    vencimento:{
-        type: Datatypes.INTEGER,
-        allowNull: false
-    },
-    numero_da_conta:{
-        type: Datatypes.INTEGER,
-        allowNull: false
-    },
-    
-     tableName:"formaDePagamento",
-     underscored: true
+        numero_da_conta: {
+            type: Datatypes.INTEGER,
+            allowNull: false
+        },
+        usuarios_id: {
+            type: Datatypes.INTEGER,
+            allowNull: false
+        },
+    }, {
+        tableName: "forma_de_pagamento",
+        underscored: true
     });
 
 
-Forma_de_pagamento.associate = (models) => { 
-    Forma_de_pagamento.hasMany(models.usuario,{
-        foreignKey: "usuario_id",
-        as: "usuario"
-    })
-}
-return Forma_de_pagamento;
+    FormaDePagamento.associate = (models) => {
+        FormaDePagamento.belongsTo(models.Usuario, {
+            foreignKey: "usuarios_id",
+            as: "usuario"
+        })
+    }
+    return FormaDePagamento;
 };

@@ -1,23 +1,27 @@
 module.exports = (Sequelize, Datatypes) => {
-    const Estoque = Sequelize.define("Estoque",{
-
-    id:{
+    const Estoque = Sequelize.define("Estoque", {
+        quantidade: {
             type: Datatypes.INTEGER,
-            primaryKey:true,
+            allowNull: false
+        },
+        id: {
+            type: Datatypes.INTEGER,
+            primaryKey: true,
             autoIncrement: true,
             allowNull: false
         },
-    quantidade:{
-        type: Datatypes.INTEGER,
-        allowNull: false
-    },
-}, {
-     tableName:"estoque",
-     underscored: true
+        produto_id: {
+            type: Datatypes.INTEGER,
+            allowNull: false
+        }
+
+    }, {
+        tableName: "estoque",
+        underscored: true
     });
 
     Estoque.associate = (models) => {
-        Estoque.hasMany(models.estoque_id,{
+        Estoque.hasMany(models.Produto, {
             foreigKey: "produto_id",
             as: "produto"
         })
