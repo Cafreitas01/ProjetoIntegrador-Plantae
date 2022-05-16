@@ -5,6 +5,8 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require("method-override");
 
+const loginPlantae = require('./middlewares/loginPlantae');
+const session = require('express-session');
 
 
 const contatoRouter = require('./routes/contato');
@@ -24,6 +26,9 @@ const inicialRouter = require('./routes/inicial');
 const cadastroRouter = require('./routes/cadastro');
 const ferramentasRouter = require('./routes/ferramentas');
 const entregaRouter = require('./routes/entrega');
+const adminRouter = require('./routes/admin');
+
+const autenticador = require('./middlewares/autenticacao');
 
 
 const app = express();
@@ -35,8 +40,11 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride("_method"));
+app.use(loginPlantae);
+
 
 app.use('/', indexRouter);
 app.use('/viveiro', viveiroRouter);
@@ -55,6 +63,7 @@ app.use('/inicial',inicialRouter);
 app.use('/cadastro',cadastroRouter);
 app.use('/ferramentas',ferramentasRouter);
 app.use('/entrega',entregaRouter);
+app.use('/admin', autenticador, adminRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
