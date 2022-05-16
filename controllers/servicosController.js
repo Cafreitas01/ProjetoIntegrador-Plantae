@@ -1,5 +1,9 @@
+const servicosModel = require('../models/servicos.json');
+
 const servicosController = {
-    index: (req, res) => res.render('servicos')
-  };
-  
-  module.exports = servicosController;
+  buscarServicos: (req, res) => {
+    res.render('servicos', { servicos: servicosModel })
+  }
+};
+
+module.exports = servicosController;
