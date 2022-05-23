@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -112,7 +112,7 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
-=======
+
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -146,7 +146,7 @@ const adminRouter = require('./routes/admin');
 const autenticador = require('./middlewares/autenticacao');
 
 
-const app = express();
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -199,4 +199,4 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
->>>>>>> 0b3dbf7c68fb04d4b21227f001863c5dffd784fd
+

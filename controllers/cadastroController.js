@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // const cadastroController = {
 //     index: (req, res) => res.render('cadastro')
 //   };
@@ -53,7 +53,7 @@ const cadastroController = {
   }
 
 }
-=======
+
 const uuidv4 = require('uuidv4');
 const bcrypt = require('bcrypt');
 const fs = require('fs');
@@ -94,6 +94,5 @@ const cadastroController = {
     res.redirect('/login');
   }
 };
->>>>>>> 0b3dbf7c68fb04d4b21227f001863c5dffd784fd
 
 module.exports = cadastroController;
