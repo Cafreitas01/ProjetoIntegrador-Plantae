@@ -4,8 +4,40 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require("method-override");
+const bodyParser = require("body-parser");
 
 
+
+// //Rota de validação Cadastro
+// app.get('/cadastro', function(req, res){
+//   res.render('cadastro');
+// });
+
+// app.get('/minhaConta', function(req,res){
+//   res.render('minhaConta');
+// });
+
+// app.post('/usuario', function(req, res){
+//   usuario.create({
+//     nome_completo: req.body.nome_completo,
+//     cpf: req.body.cpf,
+//     Email: req.body.Email,
+//     data_de_nascimento: req.body.data_de_nascimento,
+//     telefone: req.body .telefone,
+//     senha: req.body .senha,
+//     rua: req.body .rua,
+//     cidade: req.body .cidade,
+//     pais: req.body .pais,
+//     numero_da_residencia: req.body .numero_da_residencia,
+
+// }).then(function(){
+//     res.redirect('/usuario')
+//     res.send("Usuario cadastro com sucesso!")
+// }).catch(function(erro){
+//     res.send("Erro: Verifique seus Dados!" + erro)
+// })
+ 
+// })
 
 const contatoRouter = require('./routes/contato');
 const indexRouter = require('./routes/index');
@@ -27,6 +59,7 @@ const entregaRouter = require('./routes/entrega');
 
 
 const app = express();
+const usuario = require("./models/Usuario");
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -37,6 +70,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride("_method"));
+app.use(bodyParser.urlencoded({extended:false}))
+app.use(bodyParser.json())
 
 app.use('/', indexRouter);
 app.use('/viveiro', viveiroRouter);
@@ -55,6 +90,7 @@ app.use('/inicial',inicialRouter);
 app.use('/cadastro',cadastroRouter);
 app.use('/ferramentas',ferramentasRouter);
 app.use('/entrega',entregaRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

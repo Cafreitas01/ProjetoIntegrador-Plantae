@@ -1,9 +1,9 @@
 const express = require('express');
-const usersController = require('../controllers/usersController');
+const cadastroController = require('../controllers/cadastroController');
 const router = express.Router();
 
 router.get('/', function (req, res, next) {
-    res.render('users');
+    res.render('cadastro');
 });
 
 module.exports = router;
