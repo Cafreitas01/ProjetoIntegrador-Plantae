@@ -1,45 +1,25 @@
+const bcrypt = require('bcrypt');
+const usuariosModel = require('../models/usuarios.json');
 
-const { OAuth2Client } = require('google-auth-library');
-const { Usuario } = require('../database/models');
+const loginController = {
+  index: (req, res) => res.render('login'),
+  store: (req, res) => {
+    const { email, senha } = req.body;
+    
+    const usuario = usuariosModel.find(usuario => usuario.email === email);
 
-module.exports = {
-  new: function(request, response) {
-    return response.render('login')
-  },
-  authenticate: function(request, response) {
-
-  },
-  authGoogle: async function(request, response) {
-    const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
-
-    const ticket = await client.verifyIdToken({
-      idToken: request.body.credential,
-      audience: process.env.GOOGLE_CLIENT_ID
-    });
-
-    const { name, email,senha,data_de_nascimento,CPF,telefone, sub: google_id } = ticket.getPayload();
-
-    const userAlreadyExists = await Usuario.findOne({
-      where: { google_id }
-    });
-
-    if (usuarioAlreadyExists) {
-      request.session.usuario = usuarioAlreadyExists;
-      return response.redirect('/');
+    if (!usuario) {
+      return res.render('login', { erro: 'Email e/ou senha estão incorretos. Tente novamente' });
     }
 
-    const usuario = await Usuario.create({
-      name,
-      email,
-      senha,
-      data_de_nascimento,
-      CPF,
-      telefone,
-      google_id
-    });
+    if (!bcrypt.compareSync(senha, usuario.senha)) {
+      return res.render('login', { erro: 'Email e/ou senha estão incorretos. Tente novamente' });
+    }
 
-    request.session.usuario = Usuario;
-    return response.redirect('/');
+    req.session.usuario = usuario;
+
+    res.redirect('/admin');
   }
-}
+};
 
+module.exports = loginController;
