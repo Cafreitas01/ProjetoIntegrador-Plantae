@@ -5,82 +5,129 @@
 </head>
 <body>
     <%- include('./partials/header'); %>
-    <div class="card">
-        <div class="row">
-            <div class="col-md-8 cart">
-                <div class="title">
-                    <div class="row">
-                        <div class="col"><h4><b>Seu Carrinho</b></h4></div>
-                        <div class="col align-self-center text-right text-muted">3 items</div>
+    
+    <main>
+        <div class="container">
+            <h1>Carrinho de Compras</h1>
+            <hr>
+            <ul class="list-group mb-3">
+                <li class="list-group-item py-3">
+                    <div class="row g-3">
+                        <div class="col-4 col-md-3 col-lg-2">
+                            <a href="#">
+                                <img src="https://i.imgur.com/ymvE8ID.jpg" class="img-thumbnail">
+                            </a>
+
+                        </div>
+                        <div class="col-8 col-md-9 col-lg-7 col-xl-8 text-left align-self-center">
+                            <h4><b><a href="#" class="text-decoration-none text-danger">Kit de Ferramentas</a>
+
+                            </b>
+
+                            </h4>
+
+                        </div>
+                        <div class="col-6 offset-6 col-sm-6 offset-sm-6 col-md-4 offset-md-8 col-lg-3
+                                offset-lg-0 col-xl-2 align-self-center mt-3">
+                            <div class="input-group">
+                                <button type="button" class="btn btn-outline-dark btn sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                        <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                                      </svg>
+
+                                </button>
+                                <input type="text" class="form-control text-center border-dark" value="1">
+
+                                <button type="button" class="btn btn-outline-dark btn sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up" viewBox="0 0 16 16">
+                                        <path d="M3.204 11h9.592L8 5.519 3.204 11zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z"/>
+                                      </svg>
+
+                                </button>
+
+                                <button type="button" class="btn btn-outline-danger border-dark btn sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                    </svg>
+                            </div>
+                            <div class="text-right mt-2">
+                                <smal class="text-secondary">Valor: R$39.99</smal><br>
+                                <span class="text-dark">Valor desconto: R$0.99</span>
+
+                            </div>
+                        </div>
+
                     </div>
-                </div>    
-                <div class="row border-top border-bottom">
-                    <div class="row main align-items-center">
-                        <div class="col-2"><img class="img-fluid" src="https://i.imgur.com/yDzbc2I.jpg"></div>
-                        <div class="col">
-                            <div class="row text-muted">Ferramentas</div>
-                            <div class="row">Kit de Ferramentas</div>
+
+                   
+                </li>
+
+                <li class="list-group-item py-3">
+                    <div class="row g-3">
+                        <div class="col-4 col-md-3 col-lg-2">
+                            <a href="#">
+                                <img src="https://i.imgur.com/yDzbc2I.jpg" class="img-thumbnail">
+                            </a>
+
                         </div>
-                        <div class="col">
-                            <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                        <div class="col-8 col-md-9 col-lg-7 col-xl-8 text-left align-self-center">
+                            <h4><b><a href="#" class="text-decoration-none text-danger">Kit de Ferramentas</a>
+
+                            </b>
+
+                            </h4>
+
                         </div>
-                        <div class="col">&dollar; 44.00 <span class="close">&#10005;</span></div>
+                        <div class="col-6 offset-6 col-sm-6 offset-sm-6 col-md-4 offset-md-8 col-lg-3
+                                offset-lg-0 col-xl-2 align-self-center mt-3">
+                            <div class="input-group">
+                                <button type="button" class="btn btn-outline-dark btn sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                        <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                                      </svg>
+
+                                </button>
+                                <input type="text" class="form-control text-center border-dark" value="1">
+
+                                <button type="button" class="btn btn-outline-dark btn sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up" viewBox="0 0 16 16">
+                                        <path d="M3.204 11h9.592L8 5.519 3.204 11zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z"/>
+                                      </svg>
+
+                                </button>
+
+                                <button type="button" class="btn btn-outline-danger border-dark btn sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                    </svg>
+                            </div>
+                            <div class="text-right mt-2">
+                                <smal class="text-secondary">Valor: R$39.99</smal><br>
+                                <span class="text-dark">Valor desconto: R$0.99</span>
+
+                            </div>
+                        </div>
+
                     </div>
-                </div>
-                <div class="row">
-                    <div class="row main align-items-center">
-                        <div class="col-2"><img class="img-fluid" src="https://i.imgur.com/lN8PwcW.jpg"></div>
-                        <div class="col">
-                            <div class="row text-muted">Ferramentas</div>
-                            <div class="row">Kit de Jardinagem</div>
-                        </div>
-                        <div class="col">
-                            <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
-                        </div>
-                        <div class="col">&dollar; 9.99 <span class="close">&#10005;</span></div>
-                    </div>
-                </div>
-                <div class="row border-top border-bottom">
-                    <div class="row main align-items-center">
-                        <div class="col-2"><img class="img-fluid" src="https://i.imgur.com/datbcEy.jpg"></div>
-                        <div class="col">
-                            <div class="row text-muted">Ferramenta</div>
-                            <div class="row">Kit de Jardinagem</div>
-                        </div>
-                        <div class="col">
-                            <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
-                        </div>
-                        <div class="col">&dollar; 44.00 <span class="close">&#10005;</span></div>
-                    </div>
-                </div>
-                <div class="back-to-shop"><a href="./inicial">&leftarrow;</a><span class="text-muted">Voltar </span></div>
-            </div>
-            <div class="col-md-4 summary">
-                <div><h5><b>Resumo</b></h5></div>
-                <hr>
-                <div class="row">
-                    <div class="col" style="padding-left:0;">ITEMS 3</div>
-                    <div class="col text-right">&dollar; 132.00</div>
-                </div>
-                <form>
-                    <p>Frete</p>
-                    <select><option class="text-muted">Entrega Padrão- &dollar;5.00</option></select>
-                    <p>Codigo de desconto</p>
-                    <input id="code" placeholder="Enter your code">
-                </form>
-                <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
-                    <div class="col">TOTAL</div>
-                    <div class="col text-right">&dollar; 137.00</div>
-                </div>
-                <button class="btn">CONFIRMAR</button>
-            </div>
+
+                   
+                </li>
+                <li class="list-group-item py-3">
+                    <div class="text-right">
+                        <h4 class="text-dark mb-3">Valor da compra: R$79.99</h4>
+                        <span class="text-dark">Valor com desconto: R$77.99</span>
+                        <a href="./inicial" class="btn btn-outline-success btn-lg">Continuar Comprando</a>
+                        <a href="./checkout" class="btn btn-danger btn-lg">Fechar Compra</a>
+                        <!-- <button class="btn btn-danger btn-lg">Fechar Compra</button> -->
+                       </div>
+
+                </li>
+            </ul>
+
         </div>
-        
-    </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>    
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    </main>
 
 </body>
 <%- include('./partials/footer'); %>
