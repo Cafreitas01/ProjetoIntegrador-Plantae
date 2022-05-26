@@ -9,7 +9,7 @@ module.exports = {
     try {
       const { email, senha } = request.body;
 
-      const userAlreadyExists = await Usuario.findOne({
+      const userAlreadyExists = await usuario.findOne({
         where: { email }
       });
 

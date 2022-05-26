@@ -1,59 +1,3 @@
-
-// const cadastroController = {
-//     index: (req, res) => res.render('cadastro')
-//   };
-  
-//   module.exports = cadastroController;
-
-//   const { Aluno } = require("../database/models");
-
-const cadastroController = {
-  index: async (request, response) => {
-    const cadastro = await Cadastro.findAll();
-
-    response.render("index", { cadastro });
-  },
-  create: (request, response) => {
-    response.render("usuario");
-  },
-  store: async (request, response) => {
-    const { nome, sobrenome, ano_matricula } = request.body;
-
-    const usuario = await usuario.create({
-    nome_completo,
-    cpf,
-    Email,
-    data_de_nascimento,
-    telefone,
-    senha,
-    rua,
-    cidade,
-    pais,
-    numero_da_residencia,
-
-    });
-
-    return response.redirect("/cadastro");
-  },
-  edit: async (request, response) => {
-    const { id } = request.params;
-
-    const cadastro = await Usuario.findByPk(id);
-
-    return response.render("cadastro", { cadastro })
-  },
-  destroy: async (request, response) => {
-    const { id } = request.params;
-
-    const cadastro = await cadastro.findByPk(id);
-
-    await cadastro.destroy();
-
-    return response.redirect("/cadastro");
-  }
-
-}
-
 const uuidv4 = require('uuidv4');
 const bcrypt = require('bcrypt');
 const fs = require('fs');
@@ -73,7 +17,7 @@ const cadastroController = {
     if (senha !== confirmaSenha) {
       return res.render('cadastro', { erro: 'Senhas não coincidem' });
     };
-    
+
     const emailJaExiste = usuariosModel.some(usuario => usuario.email === email);
 
     if (emailJaExiste) {
@@ -82,9 +26,18 @@ const cadastroController = {
 
     const usuario = {
       id: uuidv4.uuid(),
-      nome, 
+      nome,
       email,
-      senha: bcrypt.hashSync(senha, 10)
+      senha: bcrypt.hashSync(senha, 10),
+      nome_completo,
+      cpf,
+      email,
+      data_de_nascimento,
+      telefone,
+      rua,
+      cidade,
+      pais,
+      numero_da_residencia,
     };
 
     usuariosModel.push(usuario);
@@ -96,3 +49,5 @@ const cadastroController = {
 };
 
 module.exports = cadastroController;
+
+
