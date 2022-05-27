@@ -5,8 +5,8 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require("method-override");
 const bodyParser = require("body-parser");
-// const loginPlantae = require('./middlewares/loginPlantae');
-// const session = require('express-session');
+const loginPlantae = require('./middlewares/loginPlantae');
+const session = require('express-session');
 
 
 const contatoRouter = require('./routes/contato');
@@ -47,8 +47,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride("_method"));
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
-// app.use(login);
-// app.use(session({ secret: "Iniciar a sessão" }));
+app.use(loginPlantae);  //app.use() requires a middleware function
+app.use(session({ secret: "Iniciar a sessão" }));
 
 app.use(indexRouter);
 app.use('/viveiro', viveiroRouter);

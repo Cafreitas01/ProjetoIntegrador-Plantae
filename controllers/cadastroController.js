@@ -18,7 +18,7 @@ const cadastroController = {
       return res.render('cadastro', { erro: 'Senhas não coincidem' });
     };
 
-    const emailJaExiste = usuariosModel.some(usuario => usuario.email === email);
+    const emailJaExiste = usuariosModel.some(usuario => usuario.email === email); 
 
     if (emailJaExiste) {
       return res.render('cadastro', { erro: 'Email já utilizado. Tente outro' });
@@ -28,7 +28,7 @@ const cadastroController = {
       id: uuidv4.uuid(),
       nome,
       email,
-      senha: bcrypt.hashSync(senha, 10),
+      senha: bcrypt.hashSync(senha, 10),  //erro
       nome_completo,
       cpf,
       email,
