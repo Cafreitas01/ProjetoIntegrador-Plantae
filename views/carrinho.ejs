@@ -1,92 +1,135 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-  <%- include('./partials/head'); %>
+    <%- include('./partials/head'); %>
 </head>
-
-<header>
-  <%- include('./partials/header'); %>
-</header>
-
 <body>
-  <!--carrinho-->
-  <h1 class="text-center text-success m-5">.Carrinho<a href="./maisVendidas.ejs"></a></h1>
+    <%- include('./partials/header'); %>
+    
+    <main>
+        <div class="container">
+            <h1>Carrinho de Compras</h1>
+            <hr>
+            <ul class="list-group mb-3">
+                <li class="list-group-item py-3">
+                    <div class="row g-3">
+                        <div class="col-4 col-md-3 col-lg-2">
+                            <a href="#">
+                                <img src="https://i.imgur.com/ymvE8ID.jpg" class="img-thumbnail">
+                            </a>
 
-  <section class="mx-auto m-5 text-success  " style="width: 800px;">
-    <div class="d-flex justify-content-between text-success container border border-success m-2">
-      <div class="card" style="width: 18rem;">
-        <img src="./ferramentas/images10.jpg" width="100px" height="100">
-      </div>
-      <div class="m-12">
-        <H6> Quantidade</H6>
-        <span> 1</span>
-      </div>
-      <div class="m-12">
-        <H6> Ferramenta Kit Jardim</H6>
-        <span> R$ 12,00</span>
-      </div>
-      <div class="m-12">
-        <H6> Parcelamento</H6>
-        <span> R$ 3x 1,99</span>
-      </div>
+                        </div>
+                        <div class="col-8 col-md-9 col-lg-7 col-xl-8 text-left align-self-center">
+                            <h4><b><a href="#" class="text-decoration-none text-danger">Kit de Ferramentas</a>
 
-    </div>
-    </div>
-    <div class="d-flex justify-content-between text-success container border border-success m-2">
-      <div class="card" style="width: 18rem;">
-        <img src="./ferramentas/images10.jpg" width="100px" height="100">
-      </div>
-      <div class="m-12">
-        <H6> Quantidade</H6>
-        <span> 1</span>
-      </div>
-      <div class="m-12">
-        <H6> Ferramenta Kit Jardim</H6>
-        <span> R$ 12,00</span>
-      </div>
-      <div class="m-12">
-        <H6> Parcelamento</H6>
-        <span> R$ 3x 1,99</span>
-      </div>
-  </section>
+                            </b>
 
+                            </h4>
 
-  <!-- frete-->
+                        </div>
+                        <div class="col-6 offset-6 col-sm-6 offset-sm-6 col-md-4 offset-md-8 col-lg-3
+                                offset-lg-0 col-xl-2 align-self-center mt-3">
+                            <div class="input-group">
+                                <button type="button" class="btn btn-outline-dark btn sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                        <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                                      </svg>
 
+                                </button>
+                                <input type="text" class="form-control text-center border-dark" value="1">
 
-  <section class="mx-auto m-5 text-success border border-success  " style="width: 800px;">
-    <div>
-      <h4 class="m-1">Calcular Frete</h4>
-      <form>
+                                <button type="button" class="btn btn-outline-dark btn sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up" viewBox="0 0 16 16">
+                                        <path d="M3.204 11h9.592L8 5.519 3.204 11zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z"/>
+                                      </svg>
 
-        <div class="form-group col-md-3">
-          <label>CEP</label>
-          <input type="text" class="form-control" />
-          <button type="button" class="btn btn-success m-1" data-toggle="button" aria-pressed="false"
-            autocomplete="off">
-            Calcular frete
-          </button>
-          <div class="ml-auto">
-            <span class="p-2"> Total de Frete </span>
-            <H6 class="p-2"> R$ 20,00</H6>
-          </div>
+                                </button>
+
+                                <button type="button" class="btn btn-outline-danger border-dark btn sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                    </svg>
+                            </div>
+                            <div class="text-right mt-2">
+                                <smal class="text-secondary">Valor: R$39.99</smal><br>
+                                <span class="text-dark">Valor desconto: R$0.99</span>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                   
+                </li>
+
+                <li class="list-group-item py-3">
+                    <div class="row g-3">
+                        <div class="col-4 col-md-3 col-lg-2">
+                            <a href="#">
+                                <img src="https://i.imgur.com/yDzbc2I.jpg" class="img-thumbnail">
+                            </a>
+
+                        </div>
+                        <div class="col-8 col-md-9 col-lg-7 col-xl-8 text-left align-self-center">
+                            <h4><b><a href="#" class="text-decoration-none text-danger">Kit de Ferramentas</a>
+
+                            </b>
+
+                            </h4>
+
+                        </div>
+                        <div class="col-6 offset-6 col-sm-6 offset-sm-6 col-md-4 offset-md-8 col-lg-3
+                                offset-lg-0 col-xl-2 align-self-center mt-3">
+                            <div class="input-group">
+                                <button type="button" class="btn btn-outline-dark btn sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                        <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                                      </svg>
+
+                                </button>
+                                <input type="text" class="form-control text-center border-dark" value="1">
+
+                                <button type="button" class="btn btn-outline-dark btn sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up" viewBox="0 0 16 16">
+                                        <path d="M3.204 11h9.592L8 5.519 3.204 11zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z"/>
+                                      </svg>
+
+                                </button>
+
+                                <button type="button" class="btn btn-outline-danger border-dark btn sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                    </svg>
+                            </div>
+                            <div class="text-right mt-2">
+                                <smal class="text-secondary">Valor: R$39.99</smal><br>
+                                <span class="text-dark">Valor desconto: R$0.99</span>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                   
+                </li>
+                <li class="list-group-item py-3">
+                    <div class="text-right">
+                        <h4 class="text-dark mb-3">Valor da compra: R$79.99</h4>
+                        <span class="text-dark">Valor com desconto: R$77.99</span>
+                        <a href="./inicial" class="btn btn-outline-success btn-lg">Continuar Comprando</a>
+                        <a href="./checkout" class="btn btn-danger btn-lg">Fechar Compra</a>
+                        <!-- <button class="btn btn-danger btn-lg">Fechar Compra</button> -->
+                       </div>
+
+                </li>
+            </ul>
+
         </div>
-
-    </div>
-    </form>
-    <div class="d-flex flex-row-reverse">
-      <a class="btn btn-success p-2" href="./login" role="button">Finalizar Compra</a>
-    </div>
-  </section>
-  </section>
+    </main>
 
 </body>
-<footer>
-  <%- include('./partials/footer'); %>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+<%- include('./partials/footer'); %>
+</html>
 </html>
