@@ -16,5 +16,11 @@
         "nome_completo": "carolina freitas ",
         "email": "carolina@gmail.com",
         "senha": "$2b$10$obuTsaWiJY5AvNVzNE4CXuUhzYuATK/M1bYVvo.1LzsL4motYhGEK"
+    },
+    {
+        "id": "93ac08da-93e8-4205-b54c-08e7c23f0e55",
+        "nome_completo": "joana luiza",
+        "email": "lulu@gmail.com",
+        "senha": "$2b$10$9AB.IVZ/iPMBsrCcoQiKnOy/TdJe6Bv1kXdHgxhI/VNYeuXjykKbK"
     }
 ]
