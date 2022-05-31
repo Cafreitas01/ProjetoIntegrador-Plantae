@@ -1,1 +1,20 @@
-[{"id":"dsdssdsadsa","nome_completo":"Mariana","email":"marina@gmail.com","senha":"nhbgvfcdrs"},{"id":"d5faf8df-c0f2-4b3a-b17e-5bd203da5a7a","nome_completo":"carolina ","email":"cafreitas01@gmail.com","senha":"$2b$10$vcDULrtK0PtSE8SMPe.45O49Pbpdqf1GpGdedi2IjP6XlDxy3jR5C"}]
+[
+    {
+        "id": "dsdssdsadsa",
+        "nome_completo": "Mariana",
+        "email": "marina@gmail.com",
+        "senha": "nhbgvfcdrs"
+    },
+    {
+        "id": "d5faf8df-c0f2-4b3a-b17e-5bd203da5a7a",
+        "nome_completo": "carolina ",
+        "email": "cafreitas01@gmail.com",
+        "senha": "$2b$10$vcDULrtK0PtSE8SMPe.45O49Pbpdqf1GpGdedi2IjP6XlDxy3jR5C"
+    },
+    {
+        "id": "fb13b6d8-b13f-45d8-a2d2-fd20188e5583",
+        "nome_completo": "carolina freitas ",
+        "email": "carolina@gmail.com",
+        "senha": "$2b$10$obuTsaWiJY5AvNVzNE4CXuUhzYuATK/M1bYVvo.1LzsL4motYhGEK"
+    }
+]

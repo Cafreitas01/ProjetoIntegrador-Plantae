@@ -9,7 +9,7 @@ const loginController = {
     const usuario = usuariosModel.find(usuario => usuario.email === email);
 
     if (!usuario) {
-      return res.render('login', { erro: 'Email e/ou senha estão incorretos. Tente novamente' });
+      return res.render('cadastro', { erro: '' });
     }
 
     if (!bcrypt.compareSync(senha, usuario.senha)) {
