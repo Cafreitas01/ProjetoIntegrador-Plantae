@@ -1,5 +1,5 @@
-const produtoEscolhidoController = {
-    index: (req, res) => res.render('produtoEscolhido')
-  };
-  
-  module.exports = produtoEscolhidoController;
+const carrinhoController = {
+  index: (req, res) => res.render('carrinho')
+};
+
+module.exports = carrinhoController;

@@ -13,7 +13,9 @@ const session = require('express-session');
 const contatoRouter = require('./routes/contato');
 const indexRouter = require('./routes/index');
 const pagamentoRouter = require('./routes/pagamento');
+const agradecimentoRouter = require('./routes/agradecimento')
 const carrinhoRouter = require('./routes/carrinho');
+const checkoutRouter = require('./routes/checkout');
 const sobreRouter = require('./routes/sobre');
 const terrariosRouter = require('./routes/terrarios');
 const viveiroRouter = require('./routes/viveiro');
@@ -29,6 +31,7 @@ const ferramentasRouter = require('./routes/ferramentas');
 const entregaRouter = require('./routes/entrega');
 
 const autenticador = require('./middlewares/autenticacao');
+const checkoutController = require('./controllers/checkoutController');
 
 const app = express();
 const usuario = require("./models/usuarios");
@@ -52,6 +55,8 @@ app.use(indexRouter);
 app.use('/viveiro', viveiroRouter);
 app.use('/terrarios', terrariosRouter);
 app.use('/carrinho', carrinhoRouter);
+app.use('/checkout',checkoutRouter);
+app.use('/agradecimento', agradecimentoRouter);
 app.use('/login', loginRouter);
 app.use('/pagamento', pagamentoRouter);
 app.use('/sobre', sobreRouter);
