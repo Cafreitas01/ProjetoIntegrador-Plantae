@@ -19,15 +19,9 @@ module.exports = {
 
       const usuario = await usuario.create({
         nome_completo,
-        cpf,
         Email,
-        data_de_nascimento,
-        telefone,
         senha,
-        rua,
-        cidade,
-        pais,
-        numero_da_residencia,
+        
       });
 
       request.session.usuario = { ...usuario.dataValues, senha: null }
