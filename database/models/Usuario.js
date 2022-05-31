@@ -7,42 +7,14 @@ module.exports = (Sequelize, Datatypes) => {
             allowNull: false
         },
         nome_completo: {
-            type: Datatypes.INTEGER,
-            allowNull: false
-          },
-        cpf: {
-            type: Datatypes.INTEGER,
+            type: Datatypes.STRING,
             allowNull: false
         },
         email: {
             type: Datatypes.STRING,
             allowNull: false
         },
-        dataDeNascimento: {
-            type: Datatypes.INTEGER,
-            allowNull: false
-        },
-        telefone: {
-            type: Datatypes.INTEGER,
-            allowNull: false
-        },
         senha: {
-            type: Datatypes.INTEGER,
-            allowNull: false
-        },
-        rua: {
-            type: Datatypes.STRING,
-            allowNull: false
-        },
-        cidade: {
-            type: Datatypes.STRING,
-            allowNull: false
-        },
-        pais: {
-            type: Datatypes.STRING,
-            allowNull: false
-        },
-        numero_da_residencia: {
             type: Datatypes.INTEGER,
             allowNull: false
         },

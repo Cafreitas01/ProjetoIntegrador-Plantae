@@ -9,6 +9,7 @@ const loginPlantae = require('./middlewares/loginPlantae');
 const session = require('express-session');
 
 
+
 const contatoRouter = require('./routes/contato');
 const indexRouter = require('./routes/index');
 const pagamentoRouter = require('./routes/pagamento');
@@ -45,7 +46,7 @@ app.use(methodOverride("_method"));
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 app.use(loginPlantae);  //app.use() requires a middleware function
-app.use(session({ secret: "Iniciar a sessão" }));
+// app.use(session({ secret: "Iniciar a sessão" }));
 
 app.use(indexRouter);
 app.use('/viveiro', viveiroRouter);

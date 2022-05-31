@@ -1,15 +1,1 @@
-[
-    {
-        "id": "dsdssdsadsa",
-        "nome_completo": "Mariana",
-        "cpf": "32232232522",
-        "email": "marina@gmail.com",
-        "data_de_nascimento": "06.02.1988",
-        "telefone": "119523256",
-        "senha": "nhbgvfcdrs",
-        "rua": "dasTres",
-        "cidade": "Sao Paulo",
-        "pais": "Brasil",
-        "numero_da_residencia": "25"
-    }
-]
+[{"id":"dsdssdsadsa","nome_completo":"Mariana","email":"marina@gmail.com","senha":"nhbgvfcdrs"},{"id":"d5faf8df-c0f2-4b3a-b17e-5bd203da5a7a","nome_completo":"carolina ","email":"cafreitas01@gmail.com","senha":"$2b$10$vcDULrtK0PtSE8SMPe.45O49Pbpdqf1GpGdedi2IjP6XlDxy3jR5C"}]

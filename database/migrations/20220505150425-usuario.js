@@ -10,45 +10,21 @@ module.exports = {
         allowNull: false
       },
       nome_completo: {
-        type: Sequelize.INTEGER,
-        allowNull: false
-      },
-      cpf: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false
       },
       Email: {
         type: Sequelize.STRING,
         allowNull: false
       },
-      data_de_nascimento: {
-        type: Sequelize.INTEGER,
-        allowNull: false
-      },
-      telefone: {
-        type: Sequelize.INTEGER,
-        allowNull: false
-      },
       senha: {
         type: Sequelize.INTEGER,
         allowNull: false
       },
-      rua: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
-      cidade: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
-      pais: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
-      numero_da_residencia: {
-        type: Sequelize.INTEGER,
-        allowNull: false
-      },
+
+
+
+
       created_at: {
         type: "TIMESTAMP",
         defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
