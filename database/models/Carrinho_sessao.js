@@ -20,6 +20,25 @@ module.exports = (Sequelize, Datatypes) => {
         underscored: true
     });
 
+    // Preço de produtos
+    Carrinho_sessao.beforeValidate(cart => Carrinho_sessao.id = uuid());
+
+    Carrinho_sessao.prototype.updateTotal = async function(userId){
+      const carrinho_sessao =  await Carrinho_sessao.findOne({ 
+        where: { userId },
+        include: { all: true, nested: true }
+      });
+  
+      const total = carrinho_sessao.toJSON().items.reduce((total, item) => {
+        return total + item.quantity * item.product.price;
+      }, 0);
+  
+      carrinho_sessao.total = total;
+  
+      await carrinho_sessao.save();
+    }
+ // Preço de produtos
+ 
     Carrinho_sessao.associate = (models) => {
         Carrinho_sessao.hasMany(models.Usuario, {
             foreignKey: "usuario_id",

@@ -35,5 +35,17 @@ module.exports = (Sequelize, Datatypes) => {
         tableName: "produto",
         timesTamps: false
     });
+
+    Produto.beforeValidate(produto => produto.id = uuid());
+
+    Produto.associate = models => {
+        Produto.hasMany(models.Item_carrinho, {
+          foreignKey: 'produtoId',
+          as: 'carrinho_sessao',
+          onUpdate: 'CASCADE',
+          onDelete: 'CASCADE'
+        });
+      }
+
     return Produto;
 };

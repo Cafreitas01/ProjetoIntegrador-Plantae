@@ -24,6 +24,8 @@ module.exports = (Sequelize, Datatypes) => {
         timesTamps: false
     });
 
+    Item_carrinho.beforeValidate(Item_carrinho => Item_carrinho.id = uuid());
+
     Item_carrinho.associate = (models) => {
         Item_carrinho.belongsTo(models.Carrinho_sessao, {
             foreignKey: "Carrinho_sessao_Id_usuario",

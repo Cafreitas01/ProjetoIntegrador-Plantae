@@ -24,10 +24,16 @@ module.exports = (Sequelize, Datatypes) => {
         underscored: true
     });
 
+    Usuario.beforeValidate(usuario => {
+        usuario.id = uuid()
+      });
+
     Usuario.associate = (models) => {
         Usuario.hasMany(models.FormaDePagamento, {
             foreignKey: "usuarios_id",
-            as: "formasDePagamento"
+            as: "formasDePagamento",
+            onUpdate: 'CASCADE',
+            onDelete: 'CASCADE'
         })
     }
     return Usuario;
