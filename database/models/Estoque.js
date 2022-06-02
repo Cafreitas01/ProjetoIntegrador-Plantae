@@ -1,3 +1,5 @@
+const { v4: uuid } = require('uuid');
+
 module.exports = (Sequelize, Datatypes) => {
     const Estoque = Sequelize.define("Estoque", {
         quantidade: {
@@ -5,13 +7,12 @@ module.exports = (Sequelize, Datatypes) => {
             allowNull: false
         },
         id: {
-            type: Datatypes.INTEGER,
+            type: Datatypes.UUID,
             primaryKey: true,
-            autoIncrement: true,
             allowNull: false
         },
         produto_id: {
-            type: Datatypes.INTEGER,
+            type: Datatypes.UUID,
             allowNull: false
         }
 
@@ -20,10 +21,12 @@ module.exports = (Sequelize, Datatypes) => {
         underscored: true
     });
 
-    Estoque.associate = (models) => {
-        Estoque.hasMany(models.Produto, {
-            foreigKey: "produto_id",
-            as: "produto"
+    Estoque.beforeValidate(product => product.id = uuid());
+
+    Estoque.associate = models => {
+        Estoque.hasMany(models.Product, {
+            foreigKey: "productId",
+            as: "products"
         })
     }
     return Estoque;

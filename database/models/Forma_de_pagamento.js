@@ -29,9 +29,9 @@ module.exports = (Sequelize, Datatypes) => {
 
 
     FormaDePagamento.associate = (models) => {
-        FormaDePagamento.belongsTo(models.Usuario, {
-            foreignKey: "usuarios_id",
-            as: "usuario"
+        FormaDePagamento.belongsTo(models.User, {
+            foreignKey: "user_id",
+            as: "user"
         })
     }
     return FormaDePagamento;

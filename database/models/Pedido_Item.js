@@ -28,9 +28,9 @@ module.exports = (Sequelize, Datatypes) => {
             foreignKey: "pedido_id",
             as: "pedido"
         })
-        Pedido_item.belongsTo(models.Produto, {
-            foreignKey: "produto_id",
-            as: "produto"
+        Pedido_item.belongsTo(models.Product, {
+            foreignKey: "product_id",
+            as: "product"
         })
     }
     return Pedido_item;
